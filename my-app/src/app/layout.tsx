@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Cairo } from "next/font/google"; // Cairo is excellent for Arabic
+import { Cairo } from "next/font/google"; 
 import "./globals.css";
+import Navbar from "@/components/Navbar"; // Import Navbar
 
 const cairo = Cairo({ subsets: ["arabic", "latin"] });
 
@@ -17,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body className={`${cairo.className} bg-slate-50 text-slate-900`}>
+        <Navbar /> {/* Add Navbar here */}
         {children}
       </body>
     </html>

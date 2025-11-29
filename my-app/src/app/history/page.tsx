@@ -47,39 +47,39 @@ export default async function HistoryPage() {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-            <div className="bg-white p-6 rounded-2xl border-b border-neutral-300 ring ring-neutral-300/80 flex items-center gap-4">
+            <div className="bg-white p-6 rounded-2xl border-b border-neutral-300 ring ring-neutral-200/80 shadow flex items-center gap-4">
                 <div className="bg-blue-100 p-4 rounded-xl text-blue-600">
                     <History className="w-8 h-8" />
                 </div>
                 <div>
                     <p className="text-slate-500 text-sm font-bold">عدد الامتحانات</p>
-                    <p className="text-3xl font-black text-slate-800">{totalExams}</p>
+                    <p className="text-3xl font-bold text-slate-800">{totalExams}</p>
                 </div>
             </div>
             
-            <div className="bg-white p-6 rounded-2xl border-b border-neutral-300 ring ring-neutral-300/80 flex items-center gap-4">
+            <div className="bg-white p-6 rounded-2xl border-b border-neutral-300 ring ring-neutral-200/80 shadow flex items-center gap-4">
                 <div className="bg-green-100 p-4 rounded-xl text-green-600">
                     <CheckCircle2 className="w-8 h-8" />
                 </div>
                 <div>
                     <p className="text-slate-500 text-sm font-bold">مرات النجاح</p>
-                    <p className="text-3xl font-black text-slate-800">{passedExams}</p>
+                    <p className="text-3xl font-bold text-slate-800">{passedExams}</p>
                 </div>
             </div>
 
-            <div className="bg-white p-6 rounded-2xl border-b border-neutral-300 ring ring-neutral-300/80 flex items-center gap-4">
+            <div className="bg-white p-6 rounded-2xl border-b border-neutral-300 ring ring-neutral-200/80 shadow flex items-center gap-4">
                 <div className="bg-purple-100 p-4 rounded-xl text-purple-600">
                     <BarChart3 className="w-8 h-8" />
                 </div>
                 <div>
                     <p className="text-slate-500 text-sm font-bold">معدل النقاط</p>
-                    <p className="text-3xl font-black text-slate-800">{avgScore}</p>
+                    <p className="text-3xl font-bold text-slate-800">{avgScore}</p>
                 </div>
             </div>
         </div>
 
         {/* List of Results */}
-        <div className="space-y-4">
+        <div className="space-y-3">
             {history.length === 0 ? (
                 <div className="bg-white rounded-2xl p-12 text-center border border-dashed border-slate-300">
                     <div className="mx-auto bg-slate-50 w-16 h-16 rounded-full flex items-center justify-center mb-4">
@@ -93,7 +93,7 @@ export default async function HistoryPage() {
                 </div>
             ) : (
                 history.map((item) => (
-                    <div key={item.id} className="bg-white rounded-2xl p-6 border-b border-neutral-300 ring ring-neutral-300/80 transition flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div key={item.id} className="bg-white rounded-2xl p-6 border-b border-neutral-300 ring ring-neutral-200/80 shadow-sm transition flex flex-col md:flex-row md:items-center justify-between gap-4">
                         
                         {/* Left Side: Info */}
                         <div className="flex items-start md:items-center gap-4">

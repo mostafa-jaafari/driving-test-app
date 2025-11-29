@@ -11,10 +11,10 @@ interface QuizCardProps {
 
 export default function QuizCard({ question, selectedAnswers, onToggleAnswer }: QuizCardProps) {
   return (
-    <div className="w-full max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100 transition-all">
+    <div className="w-full max-w-[830px] mx-auto bg-white rounded-2xl border-b border-neutral-300 ring ring-neutral-200/80 shadow overflow-hidden transition-all">
       
       {/* 1. Image Area */}
-      <div className="relative w-full h-64 md:h-96 bg-slate-200 flex flex-col items-center justify-center border-b border-slate-100 group">
+      <div className="relative w-full h-58 md:h-96 bg-slate-200 flex flex-col items-center justify-center border-b border-slate-100 group">
         {question.imageUrl ? (
           <Image
             src={question.imageUrl}
@@ -43,7 +43,7 @@ export default function QuizCard({ question, selectedAnswers, onToggleAnswer }: 
         </div>
 
         {/* Question Text */}
-        <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8 leading-normal">
+        <h2 className="text-xl md:text-2xl font-bold text-slate-800 mb-8 leading-normal">
           {question.questionText}
         </h2>
 
@@ -60,7 +60,7 @@ export default function QuizCard({ question, selectedAnswers, onToggleAnswer }: 
                 className={`group relative flex items-center w-full p-4 rounded-xl border-2 transition-all duration-200 hover:shadow-md h-full ${
                   isActive
                     ? "border-blue-500 bg-blue-50 text-blue-900 shadow-inner"
-                    : "border-slate-100 bg-white hover:border-blue-200 text-slate-600"
+                    : "border-slate-200 bg-white hover:border-blue-200 text-slate-600 cursor-pointer"
                 }`}
               >
                 {/* Icon Circle */}

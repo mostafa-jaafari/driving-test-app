@@ -156,26 +156,27 @@ export default function DynamicQuizPage() {
       </div>
 
       {/* Footer Navigation */}
-      <div className="w-full max-w-4xl mt-8 flex justify-between items-center gap-4 shrink-0 pb-8">
+      <div className="w-full max-w-[830px] mt-8 flex justify-between items-center gap-4 shrink-0 pb-8">
+
+        <button
+          onClick={handleNext}
+          className="cursor-pointer flex items-center gap-2 px-8 py-3.5 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200"
+        >
+          {currentQuestionIndex !== questions.length - 1 && <ArrowRight className="w-5 h-5" />}
+          {currentQuestionIndex === questions.length - 1 ? "إنهاء الامتحان" : "السؤال التالي"}
+        </button>
+        
         <button
           onClick={handlePrev}
           disabled={currentQuestionIndex === 0}
-          className={`flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold transition ${
+          className={`cursor-pointer flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold transition ${
             currentQuestionIndex === 0 
               ? "bg-slate-100 text-slate-300 cursor-not-allowed border border-slate-200" 
               : "bg-white text-slate-700 hover:bg-slate-50 border border-slate-300 shadow-sm"
           }`}
         >
-          <ArrowRight className="w-5 h-5" />
           السابق
-        </button>
-
-        <button
-          onClick={handleNext}
-          className="flex items-center gap-2 px-8 py-3.5 rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700 transition shadow-lg shadow-blue-200"
-        >
-          {currentQuestionIndex === questions.length - 1 ? "إنهاء الامتحان" : "السؤال التالي"}
-          {currentQuestionIndex !== questions.length - 1 && <ArrowLeft className="w-5 h-5" />}
+          <ArrowLeft className="w-5 h-5" />
         </button>
       </div>
     </div>

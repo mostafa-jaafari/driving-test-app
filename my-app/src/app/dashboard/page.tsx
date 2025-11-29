@@ -73,7 +73,7 @@ export default async function DashboardHome() {
         {user && (
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Stat 1 */}
-                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4">
+                <div className="bg-white p-6 rounded-2xl border-b border-neutral-300 ring ring-neutral-300/80 flex items-center gap-4">
                     <div className="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center">
                         <Trophy className="w-7 h-7" />
                     </div>
@@ -84,7 +84,7 @@ export default async function DashboardHome() {
                 </div>
 
                 {/* Stat 2 */}
-                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4">
+                <div className="bg-white p-6 rounded-2xl border-b border-neutral-300 ring ring-neutral-300/80 flex items-center gap-4">
                     <div className="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center">
                         <PlayCircle className="w-7 h-7" />
                     </div>
@@ -95,7 +95,7 @@ export default async function DashboardHome() {
                 </div>
 
                 {/* Stat 3 */}
-                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4">
+                <div className="bg-white p-6 rounded-2xl border-b border-neutral-300 ring ring-neutral-300/80 flex items-center gap-4">
                     <div className="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center">
                         <TrendingUp className="w-7 h-7" />
                     </div>
@@ -113,7 +113,7 @@ export default async function DashboardHome() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             
             {/* Link 1: Categories */}
-            <Link href="/categories" className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:border-blue-500 hover:shadow-md transition-all">
+            <Link href="/categories" className="group bg-white p-8 rounded-2xl border-b border-neutral-300 ring ring-neutral-300/80 hover:border-blue-500 hover:shadow-md transition-all">
                 <div className="mb-4 bg-slate-50 w-12 h-12 rounded-xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
                     <LayoutGrid className="w-6 h-6 text-slate-600 group-hover:text-white" />
                 </div>
@@ -123,7 +123,7 @@ export default async function DashboardHome() {
 
             {/* Link 2: History (If User) */}
             {user ? (
-                <Link href="/history" className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:border-blue-500 hover:shadow-md transition-all">
+                <Link href="/history" className="group bg-white p-8 rounded-2xl border-b border-neutral-300 ring ring-neutral-300/80 hover:border-blue-500 hover:shadow-md transition-all">
                     <div className="mb-4 bg-slate-50 w-12 h-12 rounded-xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         <History className="w-6 h-6 text-slate-600 group-hover:text-white" />
                     </div>
@@ -141,7 +141,7 @@ export default async function DashboardHome() {
             )}
 
             {/* Link 3: Category B (Direct) */}
-            <Link href="/dashboard/B" className="group bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:border-blue-500 hover:shadow-md transition-all">
+            <Link href="/dashboard/B" className="group bg-white p-8 rounded-2xl border-b border-neutral-300 ring ring-neutral-300/80 hover:border-blue-500 hover:shadow-md transition-all">
                 <div className="mb-4 bg-slate-50 w-12 h-12 rounded-xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors">
                     <Car className="w-6 h-6 text-slate-600 group-hover:text-white" />
                 </div>

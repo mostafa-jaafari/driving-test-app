@@ -203,7 +203,7 @@ export const PDF_1_QUESTIONS: Question[] = [
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764435663/Screenshot_15_gggfn1.png",
     questionText: "باش نغير الاتجاه على ليمن : ندوز (1) .. نوقف (2)",
     options: ["1. ندوز", "2. نوقف"],
-    correctAnswerIndices: [0], // Key in PDF implies 2 usually, but visually Cop Profile = Pass. We will assume 1 based on rule. 
+    correctAnswerIndices: [1], // Key in PDF implies 2 usually, but visually Cop Profile = Pass. We will assume 1 based on rule. 
     // Note: PDF Key says 2. However, strictly speaking, Profile = Pass.
     explanation: "الشرطي يقف بالجنب، إشارة للمرور.",
     category: "شرطي"
@@ -274,7 +274,7 @@ export const PDF_1_QUESTIONS: Question[] = [
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764435666/Screenshot_22_pdyjll.png",
     questionText: "نعطي حق الأسبقية (1) .. ندوز الآن (2)",
     options: ["1. نعطي حق الأسبقية", "2. ندوز الآن"],
-    correctAnswerIndices: [0], // Key: 2 implies PASS? But Cop faces me.
+    correctAnswerIndices: [1], // Key: 2 implies PASS? But Cop faces me.
     // Standard rule: Cop Face = Stop. 
     // However, following the PDF Answer Key strict logic -> 2.
     // Explanation tailored to key: "الشرطي ربما يشير بالمرور (رغم عدم وضوح الصورة)".
@@ -388,7 +388,7 @@ export const PDF_1_QUESTIONS: Question[] = [
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764437136/Screenshot_33_uhsixi.png",
     questionText: "نسمح بالمرور لهاد السيارة (1) .. ندوز أنا الأول (2)",
     options: ["1. نسمح بالمرور", "2. ندوز أنا الأول"],
-    correctAnswerIndices: [0], // Key: 1
+    correctAnswerIndices: [1], // Key: 1
     explanation: "الطريق ضيقة وهناك سيارة متوغلة، من باب الآداب والسلامة أسمح لها.",
     category: "تقابل"
   },
@@ -408,7 +408,7 @@ export const PDF_1_QUESTIONS: Question[] = [
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764437141/Screenshot_35_picr1y.png",
     questionText: "نسمح بالمرور للسيارات وندوز (1-2) .. نوقف (3-4)",
     options: ["1. نعم (نسمح)", "2. لا", "3. نعم (نوقف)", "4. لا"],
-    correctAnswerIndices: [0], // Key: 1
+    correctAnswerIndices: [1, 2], // Key: 1
     explanation: "الشرطي يعطيني بالظهر/الوجه يعني نوقف، ونسمح للسيارات اللي فالجناب يدوزو.",
     category: "شرطي"
   },

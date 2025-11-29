@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={`${cairo.className} bg-slate-50 text-slate-900`}>
+      <body className={`${cairo.className} bg-white text-slate-900`}>
         <Navbar /> {/* Add Navbar here */}
         {children}
       </body>

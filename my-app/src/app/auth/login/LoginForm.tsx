@@ -41,7 +41,7 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-64px)] flex items-center justify-center bg-slate-50 px-4">
+    <div className="min-h-[calc(100vh-64px)] flex items-center justify-center px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
         <div className="bg-slate-900 p-8 text-center">
           <div className="mx-auto bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center mb-4">

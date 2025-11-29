@@ -9,7 +9,7 @@ export default function Dashboard() {
       className="h-140 w-full flex justify-center items-center gap-3"
     >
       <Link href="/categories" className="px-6 py-2 rounded-full border border-neutral-300 hover:border-neutral-500 cursor-pointer hover:bg-neutral-100">التصنيفات</Link>
-      <Link href="/" className="px-6 py-2 rounded-full border border-neutral-300 hover:border-neutral-500 cursor-pointer hover:bg-neutral-100">الرئيسية</Link>
+      <Link href="/dashboard" className="px-6 py-2 rounded-full border border-neutral-300 hover:border-neutral-500 cursor-pointer hover:bg-neutral-100">لوحة التحكم</Link>
     </div>
   );
 }

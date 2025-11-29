@@ -30,7 +30,7 @@ export default async function HistoryPage() {
     : 0;
 
   return (
-    <div className="min-h-[calc(100vh-64px)] bg-slate-50 p-6 md:p-12 animate-in fade-in" dir="rtl">
+    <div className="min-h-[calc(100vh-64px)] p-6 md:p-12 animate-in fade-in" dir="rtl">
       <div className="max-w-5xl mx-auto">
         
         {/* Header */}

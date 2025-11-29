@@ -64,7 +64,7 @@ export default function DynamicQuizPage() {
   // Loading View
   if (loading) {
     return (
-      <div className="h-screen w-full flex flex-col items-center justify-center gap-4 bg-slate-50">
+      <div className="h-screen w-full flex flex-col items-center justify-center gap-4">
         <Loader2 className="w-10 h-10 text-blue-600 animate-spin" />
         <p className="text-slate-500 font-medium">جاري تحميل الامتحان...</p>
       </div>
@@ -122,7 +122,7 @@ export default function DynamicQuizPage() {
 
   return (
     // UPDATED CLASS HERE: h-screen (fixed height) + overflow-y-auto (scroll if needed)
-    <div className="h-screen w-full overflow-y-auto bg-slate-50 flex flex-col items-center py-8 px-4">
+    <div className="h-screen w-full overflow-y-auto flex flex-col items-center py-8 px-4">
       {/* Top Header */}
       <div className="w-full max-w-4xl flex justify-between items-center mb-6 shrink-0">
         <Link href="/dashboard" className="flex items-center gap-2 text-slate-500 hover:text-slate-800 transition">

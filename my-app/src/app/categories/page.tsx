@@ -14,7 +14,7 @@ const CATEGORIES: { id: PermisType; label: string; icon: any; color: string }[] 
 
 export default function CategoriesPage() {
   return (
-    <div className="min-h-[calc(100vh-64px)] bg-slate-50 p-6 md:p-12 animate-in fade-in slide-in-from-bottom-4 duration-700" dir="rtl">
+    <div className="min-h-[calc(100vh-64px)] p-6 md:p-12 animate-in fade-in slide-in-from-bottom-4 duration-700" dir="rtl">
       
       <div className="max-w-6xl mx-auto">
         {/* Header */}
@@ -37,7 +37,7 @@ export default function CategoriesPage() {
               return (
                 <div 
                   key={cat.id} 
-                  className="relative bg-slate-100 rounded-3xl p-8 border border-slate-200 overflow-hidden opacity-70 grayscale cursor-not-allowed"
+                  className="relative bg-slate-100 rounded-3xl p-8 border-b border-neutral-300 ring ring-neutral-200/80 shadow overflow-hidden opacity-70 grayscale cursor-not-allowed"
                 >
                   <div className="absolute top-4 left-4 bg-slate-200 text-slate-500 text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
                     <Lock className="w-3 h-3" />

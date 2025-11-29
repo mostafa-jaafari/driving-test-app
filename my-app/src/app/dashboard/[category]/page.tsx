@@ -37,7 +37,7 @@ export default function CategoryDashboard() {
   }
 
   return (
-    <div className="min-h-[calc(100vh-64px)] bg-slate-50 p-6 md:p-12 animate-in fade-in" dir="rtl">
+    <div className="min-h-[calc(100vh-64px)] p-6 md:p-12 animate-in fade-in" dir="rtl">
       
       {/* Header */}
       <div className="max-w-6xl mx-auto mb-10">

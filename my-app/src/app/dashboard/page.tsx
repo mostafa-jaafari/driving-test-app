@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getUserHistory } from "@/app/actions/history";
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
+import { EXAM_SERIES } from "@/lib/data"; // <--- 1. Import your data
 import { 
   Car, 
   History, 
@@ -32,7 +33,21 @@ export default async function DashboardHome() {
   const totalExams = history.length;
   const passedExams = history.filter(h => h.is_passed).length;
   const successRate = totalExams > 0 ? Math.round((passedExams / totalExams) * 100) : 0;
+  
+  // 5. Logic for Last Exam Result
   const lastExam = history.length > 0 ? history[0] : null;
+  
+  let lastExamTotal = 40; // Default fallback
+  
+  if (lastExam) {
+    // We try to find the series in your static data using the ID stored in history
+    // Note: Ensure your history table has 'exam_id' or 'series_id' column
+    const seriesData = EXAM_SERIES.find(s => s.id === lastExam.exam_id);
+    
+    if (seriesData) {
+        lastExamTotal = seriesData.questions.length;
+    }
+  }
 
   return (
     <div className="min-h-[calc(100vh-64px)] bg-slate-50 p-6 md:p-12 animate-in fade-in" dir="rtl">
@@ -71,7 +86,8 @@ export default async function DashboardHome() {
                     <div>
                         <p className="text-slate-400 text-sm font-bold">آخر نتيجة</p>
                         <p className="text-3xl font-bold text-slate-800">
-                            {lastExam ? `${lastExam.score}/40` : "--"}
+                            {/* UPDATED HERE: Uses dynamic variable instead of /40 */}
+                            {lastExam ? `${lastExam.score}/${lastExamTotal}` : "--"}
                         </p>
                     </div>
                 </div>

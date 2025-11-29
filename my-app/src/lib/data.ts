@@ -6,48 +6,48 @@ import { ExamSeries, PermisType, Question } from "@/types";
 const FREE_TRIAL_QUESTIONS: Question[] = [
   {
     id: "trial-1",
-    imageUrl: "", 
-    questionText: "الضُّوءْ الْأَخْضَر شَاعِل، واش يُمْكِنْ لِي نْدُوزْ؟",
-    options: ["1. نَعَمْ", "2. لَا"],
-    correctAnswerIndices: [1], 
-    explanation: "لا، رغم أن الضوء أخضر، هناك راجلين يعبرون الطريق، يجب احترام أسبقية الراجلين.",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764433970/Screenshot_2_iikoio.png", 
+    questionText: "هاد العربة دايزة، ندوز (1) .. نوقف (2)",
+    options: ["1. ندوز", "2. نوقف"],
+    correctAnswerIndices: [1], // Key: 2
+    explanation: "العربة ذات الأسبقية (الإسعاف/الإطفاء) في حالة استعجال، يجب الوقوف والسماح لها بالمرور.",
     category: "أسبقية"
   },
   {
     id: "trial-2",
-    imageUrl: "",
-    questionText: "الْخَطّ الْمَوْجُود فَالطَّرِيقْ مِنْ جِهَتِي دْلِيسَرْ مُتَّصِل، يُمْكِنْ لِي نَتْجَاوْزُو؟",
-    options: ["1. نَعَمْ", "2. لَا"],
-    correctAnswerIndices: [1],
-    explanation: "لا، الخط المتصل يمنع التجاوز قطعياً.",
-    category: "التجاوز"
-  },
-  {
-    id: "trial-3",
-    imageUrl: "",
-    questionText: "عِنْدَ وُجُودْ عَلَامَة 'قِفْ'، مِنْ الْوَاجِبْ عَلَيَّ نُوقَفْ :",
-    options: ["1. عِنْدَ الْعَلَامَة", "2. عِنْدَ الْخَطّ فِي الْأَرْض"],
-    correctAnswerIndices: [1],
-    explanation: "يجب الوقوف عند الخط الأبيض المرسوم في الأرض، وليس عند العلامة، لتوفير رؤية أفضل.",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764434776/Screenshot_11_zjbek2.png",
+    questionText: "أعطي حق الأسبقية (1) .. أمر (2)",
+    options: ["1. أعطي حق الأسبقية", "2. أمر"],
+    correctAnswerIndices: [0], // Key: 1
+    explanation: "وجود علامة 'ليس لكم حق الأسبقية'، يجب السماح بمرور السيارات القادمة.",
     category: "إشارات"
   },
   {
+    id: "trial-3",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764434776/Screenshot_6_x358kx.png",
+    questionText: "التقابل غير ممكن : ندوز أنا الأول (1) .. نعطي حق الأسبقية (2)",
+    options: ["1. ندوز أنا الأول", "2. نعطي حق الأسبقية"],
+    correctAnswerIndices: [1], // Key: 2
+    explanation: "الطريق ضيقة، يجب إعطاء حق الأسبقية.",
+    category: "التقابل"
+  },
+  {
     id: "trial-4",
-    imageUrl: "",
-    questionText: "السُّرْعَة مَحْدُودَة فِي 60 كَلْم/سَاعَة : يُمْكِنْ لِي نْمْشِي بِـ :",
-    options: ["1. 50 كلم/ساعة", "2. 70 كلم/ساعة", "3. 60 كلم/ساعة"],
-    correctAnswerIndices: [0, 2],
-    explanation: "مسموح السير بـ 50 و 60 كلم/ساعة.",
-    category: "السرعة"
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764437166/Screenshot_32_wrconh.png",
+    questionText: "بغيت نغير الاتجاه على ليسر، ندوز: قبل (1) .. من بعد (2)",
+    options: ["1. قبل السيارة", "2. بعد السيارة"],
+    correctAnswerIndices: [1], // Key: 2
+    explanation: "عند الانعطاف لليسار، يجب إعطاء الأسبقية للقادم من الاتجاه المعاكس.",
+    category: "أسبقية"
   },
   {
     id: "trial-5",
-    imageUrl: "",
-    questionText: "هَادْ السَّيَّارَة شَاعْلَة أَضْوَاء النَّجْدَة، واش نَتْجَاوَزْهَا؟",
-    options: ["1. نَعَمْ", "2. لَا"],
-    correctAnswerIndices: [0],
-    explanation: "نعم، السيارة متوقفة بسبب عطب، والرؤية واضحة.",
-    category: "قواعد السير"
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764437145/Screenshot_40_ysfpvx.png",
+    questionText: "نعطي حق الأسبقية لليسر (1) .. لليمن (2) .. ندوز بلا ما نعطي (3)",
+    options: ["1. نعطي لليسر", "2. نعطي لليمن", "3. ندوز بلا ما نعطي"],
+    correctAnswerIndices: [2], // Key: 3
+    explanation: "طريق ذات أولوية (الكاروا بالاصفر)، عندي حق الأسبقية في هذا الملتقى.",
+    category: "أسبقية"
   }
 ];
 

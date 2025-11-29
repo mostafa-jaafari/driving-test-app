@@ -122,9 +122,9 @@ export default function DynamicQuizPage() {
 
   return (
     // UPDATED CLASS HERE: h-screen (fixed height) + overflow-y-auto (scroll if needed)
-    <div className="h-screen w-full overflow-y-auto flex flex-col items-center py-8 px-4">
+    <div className="h-screen w-full flex flex-col items-center py-8 px-4">
       {/* Top Header */}
-      <div className="w-full max-w-4xl flex justify-between items-center mb-6 shrink-0">
+      <div className="w-full max-w-[830px] flex justify-between items-center mb-6 shrink-0">
         <Link href="/dashboard" className="flex items-center gap-2 text-slate-500 hover:text-slate-800 transition">
             <ArrowRight className="w-4 h-4" />
             <span className="text-sm font-bold">خروج</span>
@@ -133,7 +133,7 @@ export default function DynamicQuizPage() {
       </div>
 
       {/* Progress */}
-      <div className="w-full max-w-4xl mb-6 shrink-0">
+      <div className="w-full max-w-[830px] mb-6 shrink-0">
         <div className="flex justify-between text-sm text-slate-500 mb-2" dir="rtl">
           <span>السؤال {currentQuestionIndex + 1} <span className="text-slate-300">/</span> {questions.length}</span>
           <span>{Math.round(((currentQuestionIndex + 1) / questions.length) * 100)}%</span>
@@ -169,7 +169,7 @@ export default function DynamicQuizPage() {
         <button
           onClick={handlePrev}
           disabled={currentQuestionIndex === 0}
-          className={`cursor-pointer flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold transition ${
+          className={`cursor-pointer disabled:cursor-not-allowed flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold transition ${
             currentQuestionIndex === 0 
               ? "bg-slate-100 text-slate-300 cursor-not-allowed border border-slate-200" 
               : "bg-white text-slate-700 hover:bg-slate-50 border border-slate-300 shadow-sm"

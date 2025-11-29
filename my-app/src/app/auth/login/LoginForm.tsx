@@ -43,12 +43,12 @@ export default function LoginForm() {
   return (
     <div className="min-h-[calc(100vh-64px)] flex items-center justify-center px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
-        <div className="bg-slate-900 p-8 text-center">
+        <div className="bg-black p-8 text-center">
           <div className="mx-auto bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
             <Car className="w-6 h-6 text-white" />
           </div>
           <h1 className="text-2xl font-bold text-white mb-2">تسجيل الدخول</h1>
-          <p className="text-slate-400 text-sm">أدخل الكود أو الحساب الذي حصلت عليه</p>
+          <p className="text-slate-400 text-sm">أدخل الكود و الحساب الذي حصلت عليه</p>
         </div>
 
         <form onSubmit={handleLogin} className="p-8 space-y-6" dir="rtl">
@@ -91,7 +91,7 @@ export default function LoginForm() {
           <button 
             type="submit" 
             disabled={loading}
-            className="w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg disabled:opacity-70 flex justify-center items-center gap-2"
+            className="cursor-pointer disabled:cursor-not-allowed w-full bg-blue-600 text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg disabled:opacity-70 flex justify-center items-center gap-2"
           >
             {loading && <Loader2 className="w-5 h-5 animate-spin" />}
             دخول

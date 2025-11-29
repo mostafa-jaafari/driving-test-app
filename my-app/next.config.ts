@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
   },
   reactCompiler: true,
   images: {
-    domains: ["www.bing.com"]
+    domains: ["www.bing.com", "res.cloudinary.com"]
   }
 };
 

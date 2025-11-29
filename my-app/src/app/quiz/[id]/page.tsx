@@ -8,14 +8,14 @@ import Results from "@/components/Results";
 import { ArrowLeft, ArrowRight, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
-import { User } from "@supabase/supabase-js"; // <--- Import User type
+import { User } from "@supabase/supabase-js"; 
 
 export default function DynamicQuizPage() {
   const params = useParams();
   const router = useRouter();
   
   // State
-  const [user, setUser] = useState<User | null>(null); // <--- 1. Add User State
+  const [user, setUser] = useState<User | null>(null);
   const [isSaving, setIsSaving] = useState(false);
 
   const [questions, setQuestions] = useState<Question[]>([]);
@@ -42,13 +42,11 @@ export default function DynamicQuizPage() {
       const supabase = createClient();
       const { data: { session } } = await supabase.auth.getSession();
       
-      // <--- 2. Set the user state here
       setUser(session?.user ?? null); 
 
       // 3. Check Auth for Premium
       if (series.isPremium) {
         if (!session) {
-          // Add a returnUrl so they come back to the quiz after login
           router.push(`/auth/login?returnUrl=/quiz/${seriesId}`);
           return; 
         }
@@ -66,14 +64,14 @@ export default function DynamicQuizPage() {
   // Loading View
   if (loading) {
     return (
-      <div className="min-h-[80vh] flex flex-col items-center justify-center gap-4">
+      <div className="h-screen w-full flex flex-col items-center justify-center gap-4 bg-slate-50">
         <Loader2 className="w-10 h-10 text-blue-600 animate-spin" />
         <p className="text-slate-500 font-medium">جاري تحميل الامتحان...</p>
       </div>
     );
   }
 
-  // UPDATE: Logic when exam finishes
+  // Logic when exam finishes
   if (isFinished) {
     const score = questions.reduce((acc, q) => {
       const userSelected = userAnswers[q.id] || [];
@@ -82,9 +80,6 @@ export default function DynamicQuizPage() {
       return isCorrect ? acc + 1 : acc;
     }, 0);
 
-    // The logic inside Results component handles the saving,
-    // so we just pass the necessary props.
-    
     return (
       <Results 
         questions={questions} 
@@ -126,9 +121,10 @@ export default function DynamicQuizPage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col items-center py-8 px-4">
+    // UPDATED CLASS HERE: h-screen (fixed height) + overflow-y-auto (scroll if needed)
+    <div className="h-screen w-full overflow-y-auto bg-slate-50 flex flex-col items-center py-8 px-4">
       {/* Top Header */}
-      <div className="w-full max-w-4xl flex justify-between items-center mb-6">
+      <div className="w-full max-w-4xl flex justify-between items-center mb-6 shrink-0">
         <Link href="/dashboard" className="flex items-center gap-2 text-slate-500 hover:text-slate-800 transition">
             <ArrowRight className="w-4 h-4" />
             <span className="text-sm font-bold">خروج</span>
@@ -137,7 +133,7 @@ export default function DynamicQuizPage() {
       </div>
 
       {/* Progress */}
-      <div className="w-full max-w-4xl mb-6">
+      <div className="w-full max-w-4xl mb-6 shrink-0">
         <div className="flex justify-between text-sm text-slate-500 mb-2" dir="rtl">
           <span>السؤال {currentQuestionIndex + 1} <span className="text-slate-300">/</span> {questions.length}</span>
           <span>{Math.round(((currentQuestionIndex + 1) / questions.length) * 100)}%</span>
@@ -151,14 +147,16 @@ export default function DynamicQuizPage() {
       </div>
 
       {/* Question Card */}
-      <QuizCard
-        question={currentQuestion}
-        selectedAnswers={userAnswers[currentQuestion.id] || []}
-        onToggleAnswer={handleToggleAnswer}
-      />
+      <div className="w-full max-w-4xl shrink-0">
+        <QuizCard
+            question={currentQuestion}
+            selectedAnswers={userAnswers[currentQuestion.id] || []}
+            onToggleAnswer={handleToggleAnswer}
+        />
+      </div>
 
       {/* Footer Navigation */}
-      <div className="w-full max-w-4xl mt-8 flex justify-between items-center gap-4">
+      <div className="w-full max-w-4xl mt-8 flex justify-between items-center gap-4 shrink-0 pb-8">
         <button
           onClick={handlePrev}
           disabled={currentQuestionIndex === 0}

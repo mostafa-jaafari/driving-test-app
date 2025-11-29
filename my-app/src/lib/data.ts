@@ -491,8 +491,8 @@ export const PDF_2_QUESTIONS: Question[] = [
     id: "p2-3",
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764442761/Screenshot_3_qxyk2u.png",
     questionText: "نَتَجَاوَزْ (1) .. نْشُدْ لِيمْنْ (2)",
-    options: ["1. نَتَجَاوَزْ", "2. نْشُدْ لِيمْنْ"],
-    correctAnswerIndices: [1], // Key: 2 (Grid says 23? Wait, usually grid implies multiselect. Image 3 Key says "2 3". Option 3 is missing in text? Ah, text says 1 or 2. Key 23 usually means 2 and 3. Assuming standard 'Stay Right' logic). *Correction based on simple layout: Key says 2,3 but question has 2 options? Usually implies implied options or typos in old software. I will map to 'Stay Right'.* Actually, looking at image 3, there might be a car overtaking me. So Answer is 2.",
+    options: ["1. نعم نَتَجَاوَزْ", "2.لا ", "3.نعم نْشُدْ لِيمْنْ", "4. لا"],
+    correctAnswerIndices: [1, 2], // Key: 2 (Grid says 23? Wait, usually grid implies multiselect. Image 3 Key says "2 3". Option 3 is missing in text? Ah, text says 1 or 2. Key 23 usually means 2 and 3. Assuming standard 'Stay Right' logic). *Correction based on simple layout: Key says 2,3 but question has 2 options? Usually implies implied options or typos in old software. I will map to 'Stay Right'.* Actually, looking at image 3, there might be a car overtaking me. So Answer is 2.",
     explanation: "هناك عربة تقوم بتجاوزي (تظهر في المرآة)، يجب علي شد اليمين وعدم التجاوز.",
     category: "التجاوز"
   },
@@ -717,7 +717,7 @@ export const PDF_2_QUESTIONS: Question[] = [
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764446001/Screenshot_28_dmuarq.png",
     questionText: "نَسْتَعْمَلْ الْمُنَبِّهْ الصَّوْتِي قَبْلْ التَّجَاوُزْ :",
     options: ["1. نَعَمْ", "2. لَا"],
-    correctAnswerIndices: [1], // Key: 2
+    correctAnswerIndices: [0], // Key: 2
     explanation: "داخل المدينة، استعمال المنبه الصوتي ممنوع إلا في حالة الخطر المحدق.",
     category: "قواعد السير"
   },

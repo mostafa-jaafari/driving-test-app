@@ -464,6 +464,361 @@ export const PDF_1_QUESTIONS: Question[] = [
   }
 ];
 
+export const PDF_1_PART2_QUESTIONS: Question[] = [
+  {
+    id: "p1-41",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451754/Screenshot_1_ggf3wq.png",
+    questionText: "باش ندوز على ليسر، واجب علي : نعطي حق الأسبقية للي جاي من ليمن (1) .. نعطي حق الأسبقية للي جاي من ليسر (2) .. نعطي حق الأسبقية للي جاي من الاتجاه المعاكس (3) .. ندوز بلا ما نعطي حق الأسبقية (4)",
+    options: ["1. نعطي لليمن", "2. نعطي لليسر", "3. نعطي للمعاكس", "4. ندوز بلا ما نعطي"],
+    correctAnswerIndices: [2], // Grid: 3
+    explanation: "عند الانعطاف لليسار، يجب دائماً إعطاء حق الأسبقية للعربات القادمة من الاتجاه المعاكس.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-42",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451760/Screenshot_2_k26hvf.png",
+    questionText: "نوقف (1) .. ننبه بالمنبه الصوتي (2) .. ندوز (3)",
+    options: ["1. نوقف", "2. ننبه بالمنبه الصوتي", "3. ندوز"],
+    correctAnswerIndices: [0], // Grid: 1
+    explanation: "الراجلون يقطعون الطريق، التوقف إجباري.",
+    category: "راجلين"
+  },
+  {
+    id: "p1-43",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451765/Screenshot_3_eolnqt.png",
+    questionText: "ننقص من السرعة : نعم (1) لا (2) .. غنعطي حق الأسبقية للي جايين من ليسر (3) .. غنعطي حق الأسبقية للي جايين من ليمن (4)",
+    options: ["1. نعم (ننقص)", "2. لا", "3. نعطي لليسر", "4. نعطي لليمن"],
+    correctAnswerIndices: [2], // Grid: 3 (Implies Roundabout or Priority to Left?) - Corrected based on Grid 43->3
+    explanation: "في المدارات (Rond-point) مع علامة 'ليس لكم حق الأسبقية'، الأسبقية تكون لليسر.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-44",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451771/Screenshot_4_xnsxwy.png",
+    questionText: "باش ندوز على ليسر، ندوز : قبل السيارة البيضاء (1) .. من بعد السيارة البيضاء (2)",
+    options: ["1. قبل السيارة", "2. بعد السيارة"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "السيارة البيضاء في الاتجاه المعاكس، عند الانعطاف لليسار يجب أن أنتظر مرورها.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-45",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451550/Screenshot_5_ciy3ei.png",
+    questionText: "عند ملتقى الطرق المعلن عليه، غادي نكون مجبر : نوقف نعم (1) لا (2) .. نعطي حق الأسبقية للي جايين من ليسر (3) .. نعطي حق الأسبقية للي جايين من ليمن (4)",
+    options: ["1. نعم (نوقف)", "2. لا", "3. نعطي لليسر", "4. نعطي لليمن"],
+    correctAnswerIndices: [0], // Grid: 1 (Grid implies Stop is mandatory)
+    explanation: "العلامة التكميلية تشير إلى علامة 'قف' على بعد 150 متر، إذن الوقوف إجباري.",
+    category: "إشارات"
+  },
+  {
+    id: "p1-46",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451667/Screenshot_6_g5l2vb.png",
+    questionText: "واجب علي نعطي حق الأسبقية للي جاي من ليمن (1) .. ننقص من السرعة و ندوز أنا الأول (2)",
+    options: ["1. نعطي حق الأسبقية", "2. ندوز أنا الأول"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "أنا في طريق ذات أولوية (الكاروا)، لدي حق المرور.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-47",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451671/Screenshot_7_qvpkda.png",
+    questionText: "نخرج من هذا المسلك الآن : نعم (1) لا (2) .. ننقص من السرعة ونبقى فهاد المسلك : نعم (3) لا (4)",
+    options: ["1. نعم (نخرج)", "2. لا", "3. نعم (نبقى)", "4. لا"],
+    correctAnswerIndices: [0, 3], // Grid: 1 4 (OCR says 14 -> 1, 4)
+    explanation: "يجب الخروج الآن إذا كان المسلك سينتهي أو للتوجه للمخرج.",
+    category: "قواعد السير"
+  },
+  {
+    id: "p1-48",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451681/Screenshot_8_tfspud.png",
+    questionText: "يمكن لي نندمج فحركة السير (1) .. واجب علي ننتظر (2)",
+    options: ["1. نندمج", "2. ننتظر"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "الطريق غير خاوية، يجب الانتظار قبل الاندماج.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-49",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451687/Screenshot_9_svx0x7.png",
+    questionText: "ندخل فحركة السير الآن : نعم (1) لا (2) .. نبقى غادي فهاد المسلك : نعم (3) لا (4)",
+    options: ["1. نعم (ندخل)", "2. لا", "3. نعم (نبقى)", "4. لا"],
+    correctAnswerIndices: [1, 2], // Grid: 2 3
+    explanation: "يجب البقاء في مسلك الاندماج لزيادة السرعة قبل الدخول.",
+    category: "قواعد السير"
+  },
+  {
+    id: "p1-50",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451691/Screenshot_10_nshzm9.png",
+    questionText: "من الواجب على هاذ الراجلين يعطيوني حق الأسبقية (1) .. نعطي حق الأسبقية لهاذ الراجلين (2) .. ننبه بالمنبه الصوتي وندوز (3)",
+    options: ["1. يعطيوني الأسبقية", "2. نعطي الأسبقية", "3. ننبه وندوز"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "الراجلون وسط الطريق، الأسبقية لهم دائماً.",
+    category: "راجلين"
+  },
+  {
+    id: "p1-51",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451698/Screenshot_11_cvimtk.png",
+    questionText: "ما جاي حد من جهة ليسر : باش ندور على ليمن : ننقص من السرعة و ندوز نعم (1) لا (2) .. نوقف نعم (3) لا (4)",
+    options: ["1. نعم (ندوز)", "2. لا (ندوز)", "3. نعم (نوقف)", "4. لا (نوقف)"],
+    correctAnswerIndices: [1, 2], // Grid: 2 3 (No Pass, Yes Stop)
+    explanation: "علامة قف تلزمك بالوقوف التام حتى لو كانت الطريق فارغة.",
+    category: "إشارات"
+  },
+  {
+    id: "p1-52",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451703/Screenshot_12_ov3xlj.png",
+    questionText: "نقوم بالحصر بقوة (1) .. ننقص من السرعة (2) .. نحاز ليسر (3) .. ننبه بالمنبه الصوتي (4)",
+    options: ["1. حصر بقوة", "2. ننقص السرعة", "3. نحاز ليسر", "4. منبه صوتي"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "رد الفعل الصحيح هو تخفيف السرعة فقط.",
+    category: "سلامة"
+  },
+  {
+    id: "p1-53",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451709/Screenshot_13_ynvbut.png",
+    questionText: "عند ملتقى الطرق من الواجب : ننقص من السرعة وندوز نعم (1) لا (2) .. نوقف نعم (3) لا (4)",
+    options: ["1. نعم (ندوز)", "2. لا (ندوز)", "3. نعم (نوقف)", "4. لا (نوقف)"],
+    correctAnswerIndices: [1, 2], // Grid: 2 3
+    explanation: "علامة قف تفرض الوقوف (إذن لا يمكن المرور مباشرة).",
+    category: "إشارات"
+  },
+  {
+    id: "p1-54",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451714/Screenshot_14_fpvfxo.png",
+    questionText: "باش نغير الاتجاه ليسر، واجب علي نعطي حق الأسبقية للسيارة الحمرا : نعم (1) لا (2)",
+    options: ["1. نعم", "2. لا"],
+    correctAnswerIndices: [0], // Grid: 1
+    explanation: "لأنني سأنعطف لليسار، السيارة المقابلة (الحمراء) لها الأسبقية.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-55",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451720/Screenshot_15_ahwbra.png",
+    questionText: "بغيت نغير الاتجاه على ليمن ندوز : من بعد السيارة البيضا (1) .. قبل السيارة البيضا (2)",
+    options: ["1. من بعد", "2. قبل"],
+    correctAnswerIndices: [1], // Grid: 2 (Before)
+    explanation: "إذا كانت السيارة البيضاء ستنعطف يساراً (تقطع طريقي)، وأنا سأنعطف يميناً، فأنا أمر قبلها (يمينها فارغ).",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-56",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451726/Screenshot_16_cric0c.png",
+    questionText: "نعطي حق الأسبقية (1) .. ندوز أنا الأول (2)",
+    options: ["1. نعطي حق الأسبقية", "2. ندوز أنا الأول"],
+    correctAnswerIndices: [0], // Grid: 1
+    explanation: "في ملتقى الطرق بدون إشارات، الأسبقية لليمين.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-57",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451731/Screenshot_17_pfqbdi.png",
+    questionText: "باش ندور على ليمن، أنا مجبر : نوقف (1) .. نعطي حق الأسبقية للي جاي من ليسر (2) .. نعطي حق الأسبقية للي جاي من ليمن (3)",
+    options: ["1. نوقف", "2. نعطي لليسر", "3. نعطي لليمن"],
+    correctAnswerIndices: [1], // Grid: 2 (Yield to Left)
+    explanation: "في المدار (Rond-point) مع علامة ليس لكم حق الأسبقية، نعطي الأسبقية لليسر فقط.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-58",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451737/Screenshot_18_gpg7bn.png",
+    questionText: "على بعد 150 متر : واجب علي نعطي حق الأسبقية للي جايين من ليمن (1) .. واجب علي نعطي حق الأسبقية للي جايين من ليسر (2) .. ندوز بلا ما نعطي حق الأسبقية (3)",
+    options: ["1. نعطي لليمن", "2. نعطي لليسر", "3. ندوز بلا ما نعطي"],
+    correctAnswerIndices: [0], // Grid: 1
+    explanation: "علامة خطر (كروازمة) تعني الأسبقية لليمين فقط.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-59",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451741/Screenshot_19_zt0ppk.png",
+    questionText: "نستعد باش نعطي حق الأسبقية : لي جاي من ليمن (1) .. لي جاي من ليسر (2)",
+    options: ["1. ليمن", "2. ليسر"],
+    correctAnswerIndices: [0, 1], // Grid: 1 2
+    explanation: "ملتقى طرق قادم، يجب الاستعداد لاحتمالية إعطاء الأسبقية.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-60",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451749/Screenshot_20_ca75pw.png",
+    questionText: "غادي نوقف : عند العلامة (1) .. عند الخط المتقطع (2)",
+    options: ["1. عند العلامة", "2. عند الخط المتقطع"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "الوقوف يكون دائماً عند الخط الأرضي وليس عند العلامة، لرؤية أفضل.",
+    category: "قواعد السير"
+  },
+  {
+    id: "p1-61",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453108/Screenshot_21_mrkq9m.png",
+    questionText: "نسمح بالمرور للسيارة البيضاء نعم (1) لا (2) .. ندوز نعم (3) لا (4)",
+    options: ["1. نعم (نسمح)", "2. لا", "3. نعم (ندوز)", "4. لا"],
+    correctAnswerIndices: [1, 2], // Grid: 2 3
+    explanation: "القنطرة خالية وأنا الأقرب، أدوز أنا الأول.",
+    category: "تقابل"
+  },
+  {
+    id: "p1-62",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453113/Screenshot_22_irq6hj.png",
+    questionText: "باش نغير الاتجاه ليمن : ندوز بحذر (1) .. نوقف (2)",
+    options: ["1. ندوز بحذر", "2. نوقف"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "الضوء الأحمر شاعل، الوقوف إجباري.",
+    category: "إشارات المرور"
+  },
+  {
+    id: "p1-63",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453119/Screenshot_23_j1talp.png",
+    questionText: "ندخل فحركة السير الآن (1) .. نبقى غادي فهاد المسلك مع اعطاء حق الأسبقية (2)",
+    options: ["1. ندخل الآن", "2. نبقى ونعطي الأسبقية"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "هناك عربة قادمة في الطريق السيار، يجب الانتظار في مسلك الاندماج.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-64",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453123/Screenshot_24_x24u54.png",
+    questionText: "بغيت نغير الاتجاه على ليسر، ندوز : قبل السيارة (1) .. من بعد السيارة (2)",
+    options: ["1. قبل السيارة", "2. بعد السيارة"],
+    correctAnswerIndices: [0], // Grid: 1
+    explanation: "أنا في طريق ذات أولوية (علامة)، السيارة المقابلة تريد الانعطاف (تقطع طريقي)، إذن أمر قبلها.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-65",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453130/Screenshot_25_y17haa.png",
+    questionText: "على بعد 150 متر، إلا كانت عربة جاية من ليسر ديالي : ندوز قبل منها (1) .. ندوز من بعد منها (2)",
+    options: ["1. ندوز قبل منها", "2. ندوز من بعد منها"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "علامة 'ليس لكم حق الأسبقية'، يجب أن أسمح للمرور لليمين واليسار.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-66",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453137/Screenshot_26_viayfs.png",
+    questionText: "ندوز أنا الأول (1) .. نعطي حق الأسبقية اللي جايين من ليمن (2) .. نعطي حق الأسبقية اللي جايين من ليسر (3)",
+    options: ["1. ندوز أنا الأول", "2. نعطي لليمن", "3. نعطي لليسر"],
+    correctAnswerIndices: [1, 2], // Grid: 2 3
+    explanation: "الإشارة الضوئية صفراء رفاكة (أو خاسرة)، نطبق قواعد العلامات أو اليمين (هنا ملتقى كبير، نعطي لليمين واليسار احتياطاً أو حسب العلامة إن وجدت).",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-67",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453141/Screenshot_27_bh1d3c.png",
+    questionText: "ندوز بسرعة (1) .. ننتظر هاذ العربة تدوز (2)",
+    options: ["1. ندوز بسرعة", "2. ننتظر"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "الطريق ضيقة والعربة الأخرى بدأت بالعبور.",
+    category: "تقابل"
+  },
+  {
+    id: "p1-68",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453148/Screenshot_28_g3n5gt.png",
+    questionText: "ندوز أنا الأول (1) .. ندوز من بعد الشاحنة (2)",
+    options: ["1. أنا الأول", "2. بعد الشاحنة"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "العائق في جهتي (الشاحنة واقفة)، يجب أن أنتظر.",
+    category: "تقابل"
+  },
+  {
+    id: "p1-69",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453152/Screenshot_29_uhm3fq.png",
+    questionText: "باش نتابع السير للقدام، ندوز : قبل السيارة الرمادية (1) .. من بعد السيارة الرمادية (2)",
+    options: ["1. قبل السيارة", "2. بعد السيارة"],
+    correctAnswerIndices: [0], // Grid: 1
+    explanation: "السيارة الرمادية لديها علامة قف، أنا أمر قبلها.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-70",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453157/Screenshot_30_wtnuzy.png",
+    questionText: "ندوز بسرعة (1) .. نشد ليمن (2) .. نشد ليسر (3)",
+    options: ["1. ندوز بسرعة", "2. نشد ليمن", "3. نشد ليسر"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "تقابل ضيق، يجب شد اليمين وتخفيف السرعة.",
+    category: "تقابل"
+  },
+  {
+    id: "p1-71",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453164/Screenshot_31_mmlzua.png",
+    questionText: "ندوز أنا الأول (1) .. نعطي حق الأسبقية (2)",
+    options: ["1. ندوز أنا الأول", "2. نعطي حق الأسبقية"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "سيارة الشرطة في حالة استعجال، يجب إعطاء الأسبقية.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-72",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453170/Screenshot_32_ubbjwz.png",
+    questionText: "باش ندور على ليسر، نعطي حق الأسبقية : للي جايين من ليمن (1) .. للي جايين فالاتجاه المعاكس (2) .. للي جايين من ليسر (3)",
+    options: ["1. لليمن", "2. للمعاكس", "3. لليسر"],
+    correctAnswerIndices: [0, 1, 2], // Grid: 1 2 3
+    explanation: "علامة 'ليس لكم حق الأسبقية' تعني إعطاء الحق لليمين واليسار، وعند الانعطاف يساراً نضيف الاتجاه المعاكس.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-73",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453177/Screenshot_33_mas21a.png",
+    questionText: "ندوز (1) .. نعطي حق الأسبقية (2)",
+    options: ["1. ندوز", "2. نعطي حق الأسبقية"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "شاحنة الإطفاء مشغلة المنبهات، لها الأسبقية.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-74",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453067/Screenshot_34_mticm0.png",
+    questionText: "يمكن لي نتبع مباشرة هاذ السيارة اللي كتستعد تدور على ليمن (1) .. واجب علي نوقف (2)",
+    options: ["1. نتبعها", "2. نوقف"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "علامة قف تعني وقوف كل عربة على حدة، لا يمكن اتباع السيارة مباشرة دون وقوف.",
+    category: "إشارات"
+  },
+  {
+    id: "p1-75",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453079/Screenshot_35_ojzkby.png",
+    questionText: "ندوز أنا الأول (1) .. نعطي حق الأسبقية (2)",
+    options: ["1. ندوز أنا الأول", "2. نعطي حق الأسبقية"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "سيارة الشرطة تخرج، يجب الانتباه وإعطاء الأسبقية.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-76",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453081/Screenshot_36_w5bnkg.png",
+    questionText: "ندوز بسرعة (1) .. ننتظر هاذ العربة تدوز (2)",
+    options: ["1. ندوز بسرعة", "2. ننتظر"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "العربة في الاتجاه المعاكس سبقتني للدخول، يجب الانتظار.",
+    category: "تقابل"
+  },
+  {
+    id: "p1-77",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453090/Screenshot_37_simdbv.png",
+    questionText: "ندوز قبل هاذ السيارة (1) .. نعطي حق الأسبقية (2)",
+    options: ["1. قبل السيارة", "2. نعطي حق الأسبقية"],
+    correctAnswerIndices: [0], // Grid: 1
+    explanation: "السيارة المقابلة تريد الانعطاف يساراً (تقطع طريقي)، أنا في طريقي المستقيم، إذن أمر قبلها.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-78",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453097/Screenshot_38_sxjhj8.png",
+    questionText: "ندوز (1) .. نعطي حق الأسبقية للي جايين من ليمن (2) .. نعطي حق الأسبقية للي جايين من ليسر (3)",
+    options: ["1. ندوز", "2. نعطي لليمن", "3. نعطي لليسر"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "ملتقى طرق بدون إشارات (أو ضوء أصفر رفاف)، الأسبقية لليمين فقط.",
+    category: "أسبقية"
+  },
+  {
+    id: "p1-79",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764453100/Screenshot_39_eoqqcr.png",
+    questionText: "ندوز (1) .. نعطي حق الأسبقية (2)",
+    options: ["1. ندوز", "2. نعطي حق الأسبقية"],
+    correctAnswerIndices: [0], // Grid: 1
+    explanation: "السيارة الحمراء لديها علامة قف (أو خارجة من مكان خاص)، أنا أمر.",
+    category: "أسبقية"
+  }
+];
+
+
 // ============================================================================
 // 3. PDF 2 DATA: OVERTAKING & DOUBLAGE (PAID)
 // ============================================================================
@@ -831,6 +1186,101 @@ export const PDF_2_QUESTIONS: Question[] = [
   }
 ];
 
+export const PDF_2_PART2_QUESTIONS: Question[] = [
+  {
+    id: "p2-41",
+    imageUrl: "",
+    questionText: "العَلَامَاتْ لَلِّي مَرْسُومَة عَلَى الْأَرْضْ كَتْسْمَحْ بِالتَّجَاوُزْ : نَعَمْ (1) لَا (2) .. نَتَجَاوَزْ : نَعَمْ (3) لَا (4)",
+    options: ["1. نَعَمْ (العلامات تسمح)", "2. لَا", "3. نَعَمْ (نتجاوز)", "4. لَا"],
+    correctAnswerIndices: [0, 2], // Grid: 1, 3
+    explanation: "خط الوسط متقطع من جهتي، إذن التشوير يسمح. الرؤية واضحة ولا يوجد خطر، إذن يمكنني التجاوز.",
+    category: "التشوير الطرقي"
+  },
+  {
+    id: "p2-42",
+    imageUrl: "",
+    questionText: "يُمْكِنْ لِي نَتَجَاوَزْ هَادْ الْعَرَبَة (1) .. مَا يُمْكِنْشْ لِي نَتَجَاوَزْ (2)",
+    options: ["1. يُمْكِنْ لِي", "2. مَا يُمْكِنْشْ لِي"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "الرؤية غير واضحة (عقبة/طريق ضيقة) أو خط متصل، التجاوز ممنوع.",
+    category: "التجاوز"
+  },
+  {
+    id: "p2-43",
+    imageUrl: "",
+    questionText: "نَبَّهْ هَادْ الرَّاجِلِينْ (1) .. نَتَجَاوَزْ بِسُرْعَة (2) .. نَنْقَصْ مِنَ السُّرْعَة (3)",
+    options: ["1. نَبَّهْ", "2. نَتَجَاوَزْ بِسُرْعَة", "3. نَنْقَصْ مِنَ السُّرْعَة"],
+    correctAnswerIndices: [2], // Grid: 3
+    explanation: "وجود راجلين على حافة الطريق يفرض تخفيف السرعة وتوخي الحذر، لا التجاوز بسرعة.",
+    category: "سلامة"
+  },
+  {
+    id: "p2-44",
+    imageUrl: "",
+    questionText: "نَتَجَاوَزْ (1) .. لَا أَتَجَاوَزْ (2)",
+    options: ["1. نَتَجَاوَزْ", "2. لَا أَتَجَاوَزْ"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "الظروف الجوية سيئة (ضباب/شتاء)، الرؤية منعدمة، التجاوز ممنوع.",
+    category: "التجاوز"
+  },
+  {
+    id: "p2-45",
+    imageUrl: "",
+    questionText: "يُمْكِنْ لِي نْعْلْمْ بَلِي غَنقومْ بِالتَّجَاوُزْ بِاسْتِعْمَالْ إِشَارَة ضَوْئِيَة :",
+    options: ["1. نَعَمْ", "2. لَا"],
+    correctAnswerIndices: [0], // Grid: 1
+    explanation: "ليلاً، التنبيه الضوئي هو الوسيلة القانونية والفعالة قبل التجاوز.",
+    category: "التجاوز"
+  },
+  {
+    id: "p2-46",
+    imageUrl: "",
+    questionText: "فْهَادْ الْمُنْعَرَجْ، يُمْكِنْ نَتَجَاوَزْ هَادْ الشَّاحِنَة :",
+    options: ["1. نَعَمْ", "2. لَا"],
+    correctAnswerIndices: [0], // Grid: 1
+    explanation: "الطريق فيها خط متصل يفصل الاتجاهين أو هي طريق ذات اتجاه واحد (طريق سيار)، إذن التجاوز في المنعرج مسموح.",
+    category: "التجاوز"
+  },
+  {
+    id: "p2-47",
+    imageUrl: "",
+    questionText: "قَبْلْ التَّجَاوُزْ، يُمْكِنْ لِي نَبَّهْ : بِاسْتِعْمَالْ إِشَارَة ضَوْئِيَة (1-2) .. بِاسْتِعْمَالْ الْمُنَبِّهْ الصَّوْتِي (3-4)",
+    options: ["1. نَعَمْ (ضوء)", "2. لَا", "3. نَعَمْ (صوت)", "4. لَا"],
+    correctAnswerIndices: [0, 2], // Grid: 1, 3
+    explanation: "خارج التجمع السكني وفي النهار، يمكن استعمال الضوء والمنبه الصوتي معاً لتنبيه العربات الثقيلة.",
+    category: "التجاوز"
+  },
+  {
+    id: "p2-48",
+    imageUrl: "",
+    questionText: "نَتَجَاوَزْ : نَعَمْ (1) لَا (2) .. نْشُدْ لِيمْنْ (3) .. نَنْقَصْ مِنَ السُّرْعَة (4)",
+    options: ["1. نعم (نتجاوز)", "2. لا", "3. نْشُدْ لِيمْنْ", "4. نَنْقَصْ السُّرْعَة"],
+    correctAnswerIndices: [1, 2], // Grid: 2, 3
+    explanation: "هناك عربة ورائي تقوم بالتجاوز، إذن ممنوع عليا نتجاوز ويجب نشد لِيمْنْ (ونحافظ على السرعة، لا أنقص).",
+    category: "قواعد السير"
+  },
+  {
+    id: "p2-49",
+    imageUrl: "",
+    questionText: "نْزِيدْ فَالسُّرْعَة و نَتَجَاوَزْ هَادْ السَّيَّارَة : نَعَمْ (1) لَا (2) .. نَنْقَصْ مِنَ السُّرْعَة : نَعَمْ (3) لَا (4)",
+    options: ["1. نعم (نتجاوز)", "2. لا", "3. نعم (ننقص)", "4. لا"],
+    correctAnswerIndices: [1, 3], // Grid: 2, 4 (No overtake, No slow down).
+    // Correction: Standard rule when being overtaken is Maintain Speed.
+    // Question asks: "Speed up and overtake? (No)". "Slow down? (No)".
+    explanation: "السيارة الخلفية بدأت التجاوز، إذن : لا أتجاوز، ولا أنقص من السرعة (يجب الحفاظ عليها).",
+    category: "قواعد السير"
+  },
+  {
+    id: "p2-50",
+    imageUrl: "",
+    questionText: "نَتَجَاوَزْ هَادْ الشَّاحِنَة :",
+    options: ["1. نَعَمْ", "2. لَا"],
+    correctAnswerIndices: [0], // Grid: 1
+    explanation: "الرؤية واضحة، الخط متقطع، الطريق واسعة، التجاوز مسموح.",
+    category: "التجاوز"
+  }
+];
+
 // Placeholder for other categories
 const PLACEHOLDER_QUESTIONS: Question[] = Array.from({ length: 10 }).map((_, i) => ({
     id: `placeholder-${i}`,
@@ -866,11 +1316,27 @@ export const EXAM_SERIES: ExamSeries[] = [
   },
   {
     id: "B-series-2",
+    title: "السلسلة رقم 1 (الأسبقية - الجزء 2)",
+    description: "أسئلة حول الأسبقية، التشوير، والشرطي.",
+    isPremium: true,
+    permisType: "B",
+    questions: PDF_1_PART2_QUESTIONS
+  },
+  {
+    id: "B-series-3",
     title: "السلسلة رقم 2 (التجاوز)",
     description: "أسئلة حول قواعد التجاوز والتقابل.",
     isPremium: true,
     permisType: "B",
     questions: PDF_2_QUESTIONS
+  },
+  {
+    id: "B-series-3",
+    title: "السلسلة رقم 1 (التجاوز - الجزء 2)",
+    description: "أسئلة حول قواعد التجاوز والتقابل.",
+    isPremium: true,
+    permisType: "B",
+    questions: PDF_2_PART2_QUESTIONS
   },
 
   // --- PLACEHOLDERS FOR OTHER CATEGORIES ---

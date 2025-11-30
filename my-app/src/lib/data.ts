@@ -1189,7 +1189,7 @@ export const PDF_2_QUESTIONS: Question[] = [
 export const PDF_2_PART2_QUESTIONS: Question[] = [
   {
     id: "p2-41",
-    imageUrl: "",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764504615/Screenshot_1_sqei0b.png",
     questionText: "العَلَامَاتْ لَلِّي مَرْسُومَة عَلَى الْأَرْضْ كَتْسْمَحْ بِالتَّجَاوُزْ : نَعَمْ (1) لَا (2) .. نَتَجَاوَزْ : نَعَمْ (3) لَا (4)",
     options: ["1. نَعَمْ (العلامات تسمح)", "2. لَا", "3. نَعَمْ (نتجاوز)", "4. لَا"],
     correctAnswerIndices: [0, 2], // Grid: 1, 3
@@ -1198,7 +1198,7 @@ export const PDF_2_PART2_QUESTIONS: Question[] = [
   },
   {
     id: "p2-42",
-    imageUrl: "",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764504624/Screenshot_2_tkmzcq.png",
     questionText: "يُمْكِنْ لِي نَتَجَاوَزْ هَادْ الْعَرَبَة (1) .. مَا يُمْكِنْشْ لِي نَتَجَاوَزْ (2)",
     options: ["1. يُمْكِنْ لِي", "2. مَا يُمْكِنْشْ لِي"],
     correctAnswerIndices: [1], // Grid: 2
@@ -1207,7 +1207,7 @@ export const PDF_2_PART2_QUESTIONS: Question[] = [
   },
   {
     id: "p2-43",
-    imageUrl: "",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764504631/Screenshot_3_uuuviu.png",
     questionText: "نَبَّهْ هَادْ الرَّاجِلِينْ (1) .. نَتَجَاوَزْ بِسُرْعَة (2) .. نَنْقَصْ مِنَ السُّرْعَة (3)",
     options: ["1. نَبَّهْ", "2. نَتَجَاوَزْ بِسُرْعَة", "3. نَنْقَصْ مِنَ السُّرْعَة"],
     correctAnswerIndices: [2], // Grid: 3
@@ -1216,7 +1216,7 @@ export const PDF_2_PART2_QUESTIONS: Question[] = [
   },
   {
     id: "p2-44",
-    imageUrl: "",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764504638/Screenshot_4_zlr4xk.png",
     questionText: "نَتَجَاوَزْ (1) .. لَا أَتَجَاوَزْ (2)",
     options: ["1. نَتَجَاوَزْ", "2. لَا أَتَجَاوَزْ"],
     correctAnswerIndices: [1], // Grid: 2
@@ -1225,7 +1225,7 @@ export const PDF_2_PART2_QUESTIONS: Question[] = [
   },
   {
     id: "p2-45",
-    imageUrl: "",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764504646/Screenshot_5_qz7u1b.png",
     questionText: "يُمْكِنْ لِي نْعْلْمْ بَلِي غَنقومْ بِالتَّجَاوُزْ بِاسْتِعْمَالْ إِشَارَة ضَوْئِيَة :",
     options: ["1. نَعَمْ", "2. لَا"],
     correctAnswerIndices: [0], // Grid: 1
@@ -1234,7 +1234,7 @@ export const PDF_2_PART2_QUESTIONS: Question[] = [
   },
   {
     id: "p2-46",
-    imageUrl: "",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764504652/Screenshot_6_abishj.png",
     questionText: "فْهَادْ الْمُنْعَرَجْ، يُمْكِنْ نَتَجَاوَزْ هَادْ الشَّاحِنَة :",
     options: ["1. نَعَمْ", "2. لَا"],
     correctAnswerIndices: [0], // Grid: 1
@@ -1243,7 +1243,7 @@ export const PDF_2_PART2_QUESTIONS: Question[] = [
   },
   {
     id: "p2-47",
-    imageUrl: "",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764504663/Screenshot_7_savswk.png",
     questionText: "قَبْلْ التَّجَاوُزْ، يُمْكِنْ لِي نَبَّهْ : بِاسْتِعْمَالْ إِشَارَة ضَوْئِيَة (1-2) .. بِاسْتِعْمَالْ الْمُنَبِّهْ الصَّوْتِي (3-4)",
     options: ["1. نَعَمْ (ضوء)", "2. لَا", "3. نَعَمْ (صوت)", "4. لَا"],
     correctAnswerIndices: [0, 2], // Grid: 1, 3
@@ -1252,7 +1252,7 @@ export const PDF_2_PART2_QUESTIONS: Question[] = [
   },
   {
     id: "p2-48",
-    imageUrl: "",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764504675/Screenshot_8_k6olgw.png",
     questionText: "نَتَجَاوَزْ : نَعَمْ (1) لَا (2) .. نْشُدْ لِيمْنْ (3) .. نَنْقَصْ مِنَ السُّرْعَة (4)",
     options: ["1. نعم (نتجاوز)", "2. لا", "3. نْشُدْ لِيمْنْ", "4. نَنْقَصْ السُّرْعَة"],
     correctAnswerIndices: [1, 2], // Grid: 2, 3
@@ -1261,7 +1261,7 @@ export const PDF_2_PART2_QUESTIONS: Question[] = [
   },
   {
     id: "p2-49",
-    imageUrl: "",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764504598/Screenshot_9_tpf39e.png",
     questionText: "نْزِيدْ فَالسُّرْعَة و نَتَجَاوَزْ هَادْ السَّيَّارَة : نَعَمْ (1) لَا (2) .. نَنْقَصْ مِنَ السُّرْعَة : نَعَمْ (3) لَا (4)",
     options: ["1. نعم (نتجاوز)", "2. لا", "3. نعم (ننقص)", "4. لا"],
     correctAnswerIndices: [1, 3], // Grid: 2, 4 (No overtake, No slow down).
@@ -1272,7 +1272,7 @@ export const PDF_2_PART2_QUESTIONS: Question[] = [
   },
   {
     id: "p2-50",
-    imageUrl: "",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764504606/Screenshot_10_lql6i3.png",
     questionText: "نَتَجَاوَزْ هَادْ الشَّاحِنَة :",
     options: ["1. نَعَمْ", "2. لَا"],
     correctAnswerIndices: [0], // Grid: 1
@@ -1331,7 +1331,7 @@ export const EXAM_SERIES: ExamSeries[] = [
     questions: PDF_2_QUESTIONS
   },
   {
-    id: "B-series-3",
+    id: "B-series-4",
     title: "السلسلة رقم 1 (التجاوز - الجزء 2)",
     description: "أسئلة حول قواعد التجاوز والتقابل.",
     isPremium: true,

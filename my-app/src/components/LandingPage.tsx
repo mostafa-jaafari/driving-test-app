@@ -54,7 +54,7 @@ export default function LandingPage() {
                 href="/auth/register" 
                 className="flex items-center justify-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-2xl font-bold text-lg hover:bg-blue-50 hover:scale-105 transition shadow-xl shadow-blue-900/20"
               >
-                إبدأ مجاناً الآن
+                إبدأ الآن
                 <ArrowLeft className="w-5 h-5" />
               </Link>
               <Link 

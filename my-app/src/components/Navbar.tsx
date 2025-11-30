@@ -97,7 +97,7 @@ export default function Navbar() {
                 {/* The Dropdown Menu */}
                 {isDropdownOpen && (
                   <div 
-                    className="absolute right-0 mt-3 w-64 bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden animate-in fade-in slide-in-from-top-2 origin-top-right"
+                    className="absolute right-0 mt-3 w-64 bg-white rounded-2xl shadow-xl border-b border-neutral-300 ring ring-neutral-200/80 overflow-hidden animate-in fade-in slide-in-from-top-2 origin-top-right"
                     dir="rtl" // Force RTL content inside the dropdown
                   >
                     {/* User Header */}
@@ -162,16 +162,6 @@ export default function Navbar() {
                 </Link>
               </div>
             )}
-
-            {/* Mobile Menu Toggle */}
-            <div className="flex md:hidden">
-              <button 
-                onClick={() => setIsOpen(!isOpen)}
-                className="p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition"
-              >
-                <Menu className="w-6 h-6" />
-              </button>
-            </div>
           </div>
 
           {/* LEFT: Logo */}
@@ -187,44 +177,6 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-
-      {/* Mobile Menu (Simplified) */}
-      {isOpen && (
-        <div className="md:hidden bg-white border-t border-slate-100 absolute w-full left-0 top-16 shadow-lg" dir="rtl">
-          <div className="p-4 space-y-2">
-            <Link 
-                href="/categories" 
-                onClick={() => setIsOpen(false)}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-50 text-slate-700 font-bold"
-            >
-                <LayoutGrid className="w-5 h-5 text-slate-400" />
-                الامتحانات
-            </Link>
-            
-            {user && (
-                <Link 
-                    href="/history" 
-                    onClick={() => setIsOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-50 text-slate-700 font-bold"
-                >
-                    <History className="w-5 h-5 text-slate-400" />
-                    نتائجي
-                </Link>
-            )}
-
-            {!user && (
-                 <Link 
-                 href="/auth/login" 
-                 onClick={() => setIsOpen(false)}
-                 className="flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-600 text-white font-bold justify-center"
-             >
-                 <LogIn className="w-5 h-5" />
-                 تسجيل الدخول
-             </Link>
-            )}
-          </div>
-        </div>
-      )}
     </nav>
   );
 }

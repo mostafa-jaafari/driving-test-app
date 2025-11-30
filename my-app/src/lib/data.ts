@@ -1326,7 +1326,7 @@ export const PDF_3_QUESTIONS: Question[] = [
     id: "p3-6",
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764511955/6_jtmp2t.png",
     questionText: "عِنْدَ وُجُودْ هَادْ الْعَلَامَة، مِنَ الْوَاجِبْ عَلَيَّ : نَنْقَصْ مِنَ السُّرْعَة (1) .. مَا نَرْمِيشْ بَقَايَا السَّجَائِرْ (2)",
-    options: ["1. نَنْقَصْ السُّرْعَة", "2. مَا نَرْمِيشْ السَّجَائِرْ"],
+    options: ["1. نَنْقَصْ السُّرْعَة", "2. مَا نَرْمِيشْ السَّجَائِرْ", "3. نستعمل المنبه الصوتي"],
     correctAnswerIndices: [1], // Grid: 2
     explanation: "العلامة تحذر من خطر الحريق (منطقة غابوية)، السلوك الأهم هو تجنب أسباب الحريق.",
     category: "إشارات"
@@ -1372,7 +1372,7 @@ export const PDF_3_QUESTIONS: Question[] = [
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764511987/11_o1fyzk.png",
     questionText: "نَنْقَصْ مِنَ السُّرْعَة (1) .. نْشُدْ لِيمْنْ (2) .. عِنْدَ الضَّرُورَة، مِنَ الْوَاجِبْ عَلَى السَّيَّارَة الْأُخْرَى تُوقَفْ (3) .. أَنَا لَلِّي لَازْمْ نُوقَفْ (4)",
     options: ["1. نَنْقَصْ السُّرْعَة", "2. نْشُدْ لِيمْنْ", "3. السِّيَّارَة تُوقَفْ", "4. أَنَا نُوقَفْ"],
-    correctAnswerIndices: [1, 2], // Grid: 2 (Also logically 3).
+    correctAnswerIndices: [0, 1, 3], // Grid: 2 (Also logically 3).
     // Based on visual: You have priority (White Arrow). Oncoming has Red Arrow.
     // So: Tighten Right (2) and The other car must stop/yield (3). 
     // Grid 11 says "2". We stick to visual logic + Grid hint.
@@ -1395,7 +1395,7 @@ export const PDF_3_QUESTIONS: Question[] = [
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764511996/13_faiiae.png",
     questionText: "يُمْكِنْ لِي نْدُورْ : عَلَى لِيمْنْ (1-2) .. عَلَى لِيسَرْ (3-4)",
     options: ["1. نَعَمْ (ليمن)", "2. لَا", "3. نَعَمْ (ليسر)", "4. لَا"],
-    correctAnswerIndices: [1, 2], // Grid: 2, 3 (No to right, Yes to left)
+    correctAnswerIndices: [0, 1], // Grid: 2, 3 (No to right, Yes to left)
     explanation: "هناك علامة ممنوع المرور (Interdit) على اليمين، وإجبارية الانعطاف لليسار (السهم الأزرق).",
     category: "إشارات"
   },
@@ -1485,7 +1485,7 @@ export const PDF_3_QUESTIONS: Question[] = [
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764512169/23_c64lvd.png",
     questionText: "السَّهْمْ الْمَرْسُومْ عَلَى الْأَرْضْ، كَيْعْلْمْ بِأَنَّهُ عِنْدَ مُلْتَقَى الطُّرُقْ، يُمْكِنْ لِي : نْكَمَّلْ السَّيْرْ لِلْقُدَّامْ (1) .. نْدُورْ عَلَى لِيمْنْ (2) .. نْدُورْ عَلَى لِيسَرْ (3)",
     options: ["1. لِلْقُدَّامْ", "2. لِيمْنْ", "3. لِيسَرْ"],
-    correctAnswerIndices: [1, 2], // Grid: 2, 3
+    correctAnswerIndices: [0, 2], // Grid: 2, 3
     explanation: "السهم سهم انحياز أو انعطاف يسمح باليمين أو اليسار (حسب الرسم). *تعديل: الصورة تظهر سهماً لليمين وسهماً لليسار.*",
     category: "تشوير"
   },
@@ -1502,16 +1502,8 @@ export const PDF_3_QUESTIONS: Question[] = [
     id: "p3-25",
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764512177/25_hu3c1r.png",
     questionText: "مِنَ الْوَاجِبْ عَلَيَّ نْكُونْ عَلَى لِيمْنْ دْيَالْ هَادْ الْخَطّ بَاشْ نْكَمَّلْ السَّيْرْ (1) .. بَاشْ نَتَوَقَّفْ (2)",
-    options: ["1. نْكَمَّلْ السَّيْرْ", "2. بَاشْ نَتَوَقَّفْ"],
+    options: ["1. نعم", "2. لا", "3. نعم", "4. لا"],
     correctAnswerIndices: [1], // Grid says 2 (Stop?). Wait. 
-    // Image shows a bike lane on right. 
-    // Question: Must I be on right of line to Drive? (No, reserved). To Stop? (No, forbidden).
-    // Grid says "2"? Maybe it's "La, La". Let's check options: "Yes/No" for both?
-    // Options in text: 1. Complete driving (Yes/No)? 2. Stop (Yes/No)?
-    // Usually these are 4 options. Here listed as 2 choices.
-    // Explanation: That lane is for bikes. I cannot drive or stop there. So answers are No, No.
-    // If indices are mapped to [Yes, No, Yes, No], then [1, 3] or similar.
-    // Let's assume standard logic: Prohibited lane.
     explanation: "هذا المسلك خاص بالدراجات، يُمنع السير والوقوف فيه.",
     category: "قواعد السير"
   },

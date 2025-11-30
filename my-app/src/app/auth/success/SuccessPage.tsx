@@ -118,7 +118,7 @@ export function SuccessContent() {
           
           <a 
             // Replace with your actual number
-            href={`https://wa.me/212600000000?text=Salam, I made a payment with Ref: ${refCode}`} 
+            href={`https://wa.me/212612557789?text=Salam, I made a payment with Ref: ${refCode}`} 
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 flex items-center justify-center gap-2 bg-green-500 text-white py-3.5 rounded-xl font-bold hover:bg-green-600 transition shadow-lg shadow-green-200"

@@ -209,7 +209,7 @@ export default function LandingPage() {
                 <li className="flex items-center gap-3"><CheckCircle2 className="w-5 h-5 text-blue-500"/> وضع التدريب</li>
               </ul>
 
-              <Link href="/auth/register" className="block w-full py-4 rounded-xl border border-slate-600 text-center font-bold hover:bg-white hover:text-slate-900 transition">
+              <Link href="/dashboard/B" className="block w-full py-4 rounded-xl border border-slate-600 text-center font-bold hover:bg-white hover:text-slate-900 transition">
                 جرب مجاناً
               </Link>
             </div>

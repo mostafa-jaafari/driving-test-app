@@ -10,11 +10,12 @@ interface ResultsProps {
   userAnswers: Record<string, number[]>;
   score: number;
   onRetry: () => void;
-  examData?: { id: string; title: string }; // New Prop
+  examData?: { id: string; title: string };
 }
 
 export default function Results({ questions, userAnswers, score, onRetry, examData }: ResultsProps) {
-  const PASSING_SCORE = questions.length >= 40 ? 32 : Math.ceil(questions.length * 0.6);
+  // UPDATED: Passing score is exactly half of the questions (rounded up)
+  const PASSING_SCORE = Math.ceil(questions.length / 2);
   const passed = score >= PASSING_SCORE;
   
   const [saveStatus, setSaveStatus] = useState<"idle" | "saving" | "saved" | "error">("idle");
@@ -30,7 +31,8 @@ export default function Results({ questions, userAnswers, score, onRetry, examDa
         examId: examData.id,
         examTitle: examData.title,
         score: score,
-        totalQuestions: questions.length
+        totalQuestions: questions.length,
+        // isPassed: passed // Pass the calculated result to backend if needed
       });
 
       if (result.success) setSaveStatus("saved");
@@ -38,7 +40,7 @@ export default function Results({ questions, userAnswers, score, onRetry, examDa
     };
 
     saveData();
-  }, [examData, score, questions.length]);
+  }, [examData, score, questions.length, passed]);
 
   return (
     <div className="max-w-4xl mx-auto p-4 md:p-8 space-y-8 animate-in fade-in duration-500">
@@ -60,7 +62,7 @@ export default function Results({ questions, userAnswers, score, onRetry, examDa
           <h1 className="text-4xl font-black mb-2">
             {passed ? "🎉 مبروك عليك النجاح!" : "😔 للأسف، لم تنجح"}
           </h1>
-          {/* ... Rest of the existing UI ... */}
+          
           <p className="text-lg opacity-90 mb-6">
             {passed 
               ? "لقد تجاوزت الاختبار بنجاح." 
@@ -93,7 +95,7 @@ export default function Results({ questions, userAnswers, score, onRetry, examDa
         </div>
       </div>
       
-      {/* ... Review Answers Section (No Changes Needed Here) ... */}
+      {/* Review Answers Section */}
        <div className="space-y-6">
         <h2 className="text-2xl font-bold text-slate-800 flex items-center gap-2">
           <AlertTriangle className="w-6 h-6 text-yellow-500" />

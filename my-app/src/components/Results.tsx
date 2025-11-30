@@ -112,7 +112,7 @@ export default function Results({ questions, userAnswers, score, onRetry, examDa
             <div key={q.id} className={`bg-white rounded-xl shadow-sm border overflow-hidden transition-all ${
               isCorrect ? "border-slate-200" : "border-red-300 ring-4 ring-red-50"
             }`}>
-              <div className={`p-4 flex items-center justify-between border-b ${
+              <div className={`p-4 flex items-center justify-between border-b border-neutral-300 ${
                 isCorrect ? "bg-slate-50" : "bg-red-50"
               }`}>
                 <span className="font-bold text-slate-500">السؤال {index + 1}</span>

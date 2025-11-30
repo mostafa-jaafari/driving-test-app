@@ -461,10 +461,7 @@ export const PDF_1_QUESTIONS: Question[] = [
     correctAnswerIndices: [2], // Key: 3
     explanation: "طريق ذات أولوية (الكاروا بالاصفر)، عندي حق الأسبقية في هذا الملتقى.",
     category: "أسبقية"
-  }
-];
-
-export const PDF_1_PART2_QUESTIONS: Question[] = [
+  },
   {
     id: "p1-41",
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764451754/Screenshot_1_ggf3wq.png",
@@ -1183,10 +1180,7 @@ export const PDF_2_QUESTIONS: Question[] = [
     correctAnswerIndices: [0], // Key: 1
     explanation: "يتم تجاوزي، إذن أحافظ على سرعتي.",
     category: "قواعد السير"
-  }
-];
-
-export const PDF_2_PART2_QUESTIONS: Question[] = [
+  },
   {
     id: "p2-41",
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764504615/Screenshot_1_sqei0b.png",
@@ -1659,6 +1653,114 @@ export const PDF_3_QUESTIONS: Question[] = [
     correctAnswerIndices: [0], // Grid: 1
     explanation: "علامة 60 تحدد السرعة القصوى. أنا أسير بـ 40، يمكنني الزيادة حتى 60.",
     category: "السرعة"
+  },
+  {
+    id: "p3-41",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764513799/41_xuvwoq.png",
+    questionText: "بَاقِي لِي 1 كلم بَاشْ نُوصَلْ، عَلَى بُعْدْ 300 متر : نْكَمَّلْ السَّيْرْ لِلْقُدَّامْ (1) .. مِنَ الْوَاجِبْ عَلَيَّ تَغْيِيرْ الْاتِّجَاهْ (2)",
+    options: ["1. نْكَمَّلْ السَّيْرْ", "2. نْغَيَّرْ الْاتِّجَاهْ"],
+    correctAnswerIndices: [0, 1], // Grid: 1 3? (Grid says 1,3 but options are 1,2). 
+    // Explanation: Road is blocked at 300m. But I can continue FOR NOW (local access). 
+    // Eventually I must change direction. Grid 1+3 suggests "Continue" + "Change direction".
+    // Since we only have 2 options here, we'll map to both if the logic implies "Yes I can continue now, but Must change later".
+    // HOWEVER, visual simplicity: Can I continue straight? Yes (for 300m). Must I change? Yes (to reach destination >300m).
+    explanation: "العلامة تقول 'طريق مقطوع على بعد 300 متر'. يمكنني إكمال السير (للوصول لمحل سكنى مثلاً)، لكن بعدها سأكون مجبراً على تغيير الاتجاه.",
+    category: "إشارات"
+  },
+  {
+    id: "p3-42",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764513800/42_sfyzeq.png",
+    questionText: "هَادْ الْعَلَامَة كَتْعْلْمْنِي : أَنَّ هَادْ الطَّرِيقْ غَادِي تْكُونْ مَقْطُوعَة (1) .. أَنِّي غَادِي فْطْرِيقْ مُنْحَرِفَة (2)",
+    options: ["1. مَقْطُوعَة", "2. مُنْحَرِفَة"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "العلامة الصفراء مكتوب عليها 'انحراف' (Déviation)، إذن الطريق منحرفة وليست مقطوعة.",
+    category: "تشوير"
+  },
+  {
+    id: "p3-43",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764513808/43_k29kex.png",
+    questionText: "هَادْ الْعَلَامَة كَتْمْنَعْ الْمُرُورْ عَلَى الْعَرَبَاتْ : لَلِّي كَيْتْجَاوَزْ لْعْلُو دْيَالْهَا 2 مترو : نَعَمْ (1) لَا (2) .. لَلِّي الْعَرْضْ دْيَالْهَا 2 مترو : نَعَمْ (3) لَا (4)",
+    options: ["1. نَعَمْ (العلو)", "2. لَا", "3. نَعَمْ (العرض)", "4. لَا"],
+    correctAnswerIndices: [1, 3], // Grid: 2, 4 (No, No).
+    // Logic: Sign applies to vehicles EXCEEDING 2m. My car is <2m? Or maybe the sign is NOT width.
+    // Sign shows Height (arrows up/down). 
+    // So: Height > 2m? Yes forbidden. (Wait, Grid says 2/No?? Maybe the question asks about MY car? Or maybe the sign allows exactly 2m?).
+    // Correction: "Li l3ard dyalha 2m" (Width is 2m). Sign is Height. So Width is irrelevant (No/4).
+    // "Li l3lo 2m" -> Sign prohibits >2m. If height IS 2m, it passes. So No (2).
+    explanation: "العلامة تمنع العربات التي **يتجاوز** علوها 2 متر. إذا كان العلو 2 متر بالضبط فمسموح. كما أن العلامة تخص العلو وليس العرض.",
+    category: "إشارات"
+  },
+  {
+    id: "p3-44",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764513813/44_svpgrm.png",
+    questionText: "هَادْ الْعَلَامَة كَتْعْلْمْ عَلَى مَمَرّ السِّكَّة الْحَدِيدِيَة : بِالْحَوَاجِزْ (1) .. بِدُونْ حَوَاجِزْ (2)",
+    options: ["1. بِالْحَوَاجِزْ", "2. بِدُونْ حَوَاجِزْ"],
+    correctAnswerIndices: [0], // Grid: 1
+    explanation: "رمز السياج (Barrière) يعني وجود حواجز (عساس). رمز القطار يعني بدون حواجز.",
+    category: "إشارات"
+  },
+  {
+    id: "p3-45",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764514163/45_w0dg1r.png",
+    questionText: "غَادِي بِسُرْعَة 60 كلم في الساعة، نَبْقَى غَادِي بِنَفْسْ السُّرْعَة (1) .. نَنْقَصْ مِنَ السُّرْعَة (2)",
+    options: ["1. نَبْقَى بِنَفْسْ السُّرْعَة", "2. نَنْقَصْ مِنَ السُّرْعَة"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "وجود علامة أشغال (خطر) يفرض إنقاص السرعة فوراً.",
+    category: "سلامة"
+  },
+  {
+    id: "p3-46",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764514166/46_csfvw5.png",
+    questionText: "فْهَادْ الطَّرِيقْ السَّيَّارْ، و ابْتِدَاءً مِنْ هَادْ الْعَلَامَة، يُمْكِنْ لِي نْسُوقْ بْـ : 100 كلم (1) .. 120 كلم (2) .. 130 كلم (3)",
+    options: ["1. 100 كلم/س", "2. 120 كلم/س", "3. 130 كلم/س"],
+    correctAnswerIndices: [0, 1], // Grid: 1, 2
+    explanation: "الطريق السيار سرعته القصوى 120 كلم/س. (130 ممنوعة).",
+    category: "السرعة"
+  },
+  {
+    id: "p3-47",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764514172/47_pk8uka.png",
+    questionText: "بَاشْ نَتَجَاوَزْ، يُمْكِنْ لِي نَسْتَعْمَلْ الْمَمَرّ لَلِّي فَالْوَسْطْ : نَعَمْ (1) .. لَا (2)",
+    options: ["1. نَعَمْ", "2. لَا"],
+    correctAnswerIndices: [0], // Grid: 1
+    explanation: "العلامة الزرقاء تشير إلى أن مسلك الوسط مسموح للتجاوز في اتجاهي.",
+    category: "تشوير"
+  },
+  {
+    id: "p3-48",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764514176/48_wvje3b.png",
+    questionText: "غَادِي بِسُرْعَة 40 كلم في الساعة، وَاجِبْ عَلَيَّ نَنْقَصْ مِنَ السُّرْعَة : نَعَمْ (1) .. لَا (2)",
+    options: ["1. نَعَمْ", "2. لَا"],
+    correctAnswerIndices: [1], // Grid: 2
+    explanation: "علامة 40 هي تحديد للسرعة القصوى، وليست إجباراً لخفض السرعة إذا كنت أسير بـ 40 أو أقل.",
+    category: "السرعة"
+  },
+  {
+    id: "p3-49",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764514180/49_zlmus3.png",
+    questionText: "كَنْسُوقْ شَاحِنَة صَغِيرَة، يُمْكِنْ لِي نْكَمَّلْ السَّيْرْ فَالطَّرِيقْ الْمَوْجُودَة عَلَى لِيمْنْ دْيَالِي : نَعَمْ (1) .. لَا (2)",
+    options: ["1. نَعَمْ", "2. لَا"],
+    correctAnswerIndices: [0], // Grid: 1
+    explanation: "علامة المنع تخص الشاحنات الكبيرة (الوزن الثقيل). الشاحنة الصغيرة (B) مسموح لها.",
+    category: "إشارات"
+  },
+  {
+    id: "p3-50",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764514183/50_f33v80.png",
+    questionText: "هَادْ الْعَلَامَة كَتْعْلْمْ عَلَى : مَكَانْ مَمَرّ الرَّاجِلِينْ (1) .. مَمَرّ الرَّاجِلِينْ عَلَى بُعْدْ 50 متر (2)",
+    options: ["1. مَكَانْ مَمَرّ الرَّاجِلِينْ", "2. عَلَى بُعْدْ 50 متر"],
+    correctAnswerIndices: [0], // Grid: 1
+    explanation: "العلامة مربعة زرقاء (إرشاد)، فهي تشير إلى 'مكان' الممر بالضبط، وليست علامة خطر (مثلث) لتقول 50 متر.",
+    category: "إشارات"
+  },
+  {
+    id: "p3-51",
+    imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764514183/50_f33v80.png",
+    questionText: "من الواجب عليا ننحاز لاًقصى اليمين",
+    options: ["1. نعم", "2. لا"],
+    correctAnswerIndices: [1], // Grid: 1
+    explanation: "السيارة تسير في وسط الطريق وهذا وضع غير قانوني، يجب الالتزام بالجانب الأيمن من الطريق (السير على اليمين إجباري).",
+    category: "قواعد السير"
   }
 ];
 
@@ -1696,28 +1798,12 @@ export const EXAM_SERIES: ExamSeries[] = [
     questions: PDF_1_QUESTIONS
   },
   {
-    id: "B-series-2",
-    title: "السلسلة رقم 1 (الأسبقية - الجزء 2)",
-    description: "أسئلة حول الأسبقية، التشوير، والشرطي.",
-    isPremium: true,
-    permisType: "B",
-    questions: PDF_1_PART2_QUESTIONS
-  },
-  {
     id: "B-series-3",
     title: "السلسلة رقم 2 (التجاوز)",
     description: "أسئلة حول قواعد التجاوز والتقابل.",
     isPremium: true,
     permisType: "B",
     questions: PDF_2_QUESTIONS
-  },
-  {
-    id: "B-series-4",
-    title: "السلسلة رقم 1 (التجاوز - الجزء 2)",
-    description: "أسئلة حول قواعد التجاوز والتقابل.",
-    isPremium: true,
-    permisType: "B",
-    questions: PDF_2_PART2_QUESTIONS
   },
   {
     id: "B-series-5",

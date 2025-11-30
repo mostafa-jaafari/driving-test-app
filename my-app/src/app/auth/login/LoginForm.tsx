@@ -41,17 +41,17 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-64px)] flex items-center justify-center px-4">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden">
-        <div className="bg-black p-8 text-center">
+    <div className="min-h-120 flex flex-col items-center justify-center px-4">
+        <div className="p-8 text-center">
           <div className="mx-auto bg-blue-600 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
             <Car className="w-6 h-6 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-white mb-2">تسجيل الدخول</h1>
+          <h1 className="text-2xl font-bold text-neutral-600 mb-2">تسجيل الدخول</h1>
           <p className="text-slate-400 text-sm">أدخل الكود و الحساب الذي حصلت عليه</p>
         </div>
+      <div className="w-full max-w-md bg-white shadow rounded-2xl border-b border-neutral-300 ring ring-neutral-200/80 overflow-hidden">
 
-        <form onSubmit={handleLogin} className="p-8 space-y-6" dir="rtl">
+        <form onSubmit={handleLogin} className="p-6 space-y-6" dir="rtl">
           {error && (
             <div className="bg-red-50 text-red-600 p-3 rounded-lg text-sm text-center">
               {error}

@@ -1503,7 +1503,7 @@ export const PDF_3_QUESTIONS: Question[] = [
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764512177/25_hu3c1r.png",
     questionText: "مِنَ الْوَاجِبْ عَلَيَّ نْكُونْ عَلَى لِيمْنْ دْيَالْ هَادْ الْخَطّ بَاشْ نْكَمَّلْ السَّيْرْ (1) .. بَاشْ نَتَوَقَّفْ (2)",
     options: ["1. نعم", "2. لا", "3. نعم", "4. لا"],
-    correctAnswerIndices: [1], // Grid says 2 (Stop?). Wait. 
+    correctAnswerIndices: [1, 3], // Grid says 2 (Stop?). Wait. 
     explanation: "هذا المسلك خاص بالدراجات، يُمنع السير والوقوف فيه.",
     category: "قواعد السير"
   },
@@ -1521,7 +1521,7 @@ export const PDF_3_QUESTIONS: Question[] = [
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764512188/27_nctbpk.png",
     questionText: "إِلَا تْبَعْتْ هَادْ الاتِّجَاهْ، غَادِي نْكُونْ كَنْسِيرْ فِي طَرِيقْ : وَطَنِيَة (1) .. جِهَوِيَة (2)",
     options: ["1. وَطَنِيَة", "2. جِهَوِيَة"],
-    correctAnswerIndices: [0], // Grid: 1
+    correctAnswerIndices: [1], // Grid: 1
     explanation: "المربع الأحمر فوق العلامة يعني طريق وطنية (الأصفر جهوية، الأزرق إقليمية).",
     category: "إشارات"
   },
@@ -1557,7 +1557,7 @@ export const PDF_3_QUESTIONS: Question[] = [
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764512204/31_uteral.png",
     questionText: "فْهَادْ الْمَسْلَكْ، يُمْكِنْ لِي : نْكَمَّلْ السَّيْرْ لِلْقُدَّامْ (1) .. نْدُورْ عَلَى لِيسَرْ (2) .. نْدُورْ عَلَى لِيمْنْ (3)",
     options: ["1. قُدَّامْ", "2. لِيسَرْ", "3. لِيمْنْ"],
-    correctAnswerIndices: [0, 2], // Grid: 1, 3
+    correctAnswerIndices: [2], // Grid: 1, 3
     explanation: "سهم الاتجاه يسمح بالأمام أو اليمين. اليسار ممنوع من هذا المسلك.",
     category: "تشوير"
   },
@@ -1566,7 +1566,7 @@ export const PDF_3_QUESTIONS: Question[] = [
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764512234/32_c9atmd.png",
     questionText: "إِلَا اتَّجَهْتْ لَطْرِيقْ لَلِّي كَتْأَدِّي لَلْصْخِيرَاتْ : غَنْدْخْلْ لَطْرِيقْ سَيَّارْ (1) .. غَنْخْرْجْ مِنْ طْرِيقْ سَيَّارْ (2)",
     options: ["1. نْدْخْلْ", "2. نْخْرْجْ"],
-    correctAnswerIndices: [0], // Grid: 1
+    correctAnswerIndices: [1], // Grid: 1
     explanation: "أنا في مدخل الطريق السيار، والاتجاه للصخيرات عبر الطريق السيار.",
     category: "تشوير"
   },
@@ -1651,11 +1651,7 @@ export const PDF_3_QUESTIONS: Question[] = [
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764513799/41_xuvwoq.png",
     questionText: "بَاقِي لِي 1 كلم بَاشْ نُوصَلْ، عَلَى بُعْدْ 300 متر : نْكَمَّلْ السَّيْرْ لِلْقُدَّامْ (1) .. مِنَ الْوَاجِبْ عَلَيَّ تَغْيِيرْ الْاتِّجَاهْ (2)",
     options: ["1. نْكَمَّلْ السَّيْرْ", "2. نْغَيَّرْ الْاتِّجَاهْ"],
-    correctAnswerIndices: [0, 1], // Grid: 1 3? (Grid says 1,3 but options are 1,2). 
-    // Explanation: Road is blocked at 300m. But I can continue FOR NOW (local access). 
-    // Eventually I must change direction. Grid 1+3 suggests "Continue" + "Change direction".
-    // Since we only have 2 options here, we'll map to both if the logic implies "Yes I can continue now, but Must change later".
-    // HOWEVER, visual simplicity: Can I continue straight? Yes (for 300m). Must I change? Yes (to reach destination >300m).
+    correctAnswerIndices: [1], // Grid: 1 3? (Grid says 1,3 but options are 1,2). 
     explanation: "العلامة تقول 'طريق مقطوع على بعد 300 متر'. يمكنني إكمال السير (للوصول لمحل سكنى مثلاً)، لكن بعدها سأكون مجبراً على تغيير الاتجاه.",
     category: "إشارات"
   },
@@ -1674,11 +1670,6 @@ export const PDF_3_QUESTIONS: Question[] = [
     questionText: "هَادْ الْعَلَامَة كَتْمْنَعْ الْمُرُورْ عَلَى الْعَرَبَاتْ : لَلِّي كَيْتْجَاوَزْ لْعْلُو دْيَالْهَا 2 مترو : نَعَمْ (1) لَا (2) .. لَلِّي الْعَرْضْ دْيَالْهَا 2 مترو : نَعَمْ (3) لَا (4)",
     options: ["1. نَعَمْ (العلو)", "2. لَا", "3. نَعَمْ (العرض)", "4. لَا"],
     correctAnswerIndices: [1, 3], // Grid: 2, 4 (No, No).
-    // Logic: Sign applies to vehicles EXCEEDING 2m. My car is <2m? Or maybe the sign is NOT width.
-    // Sign shows Height (arrows up/down). 
-    // So: Height > 2m? Yes forbidden. (Wait, Grid says 2/No?? Maybe the question asks about MY car? Or maybe the sign allows exactly 2m?).
-    // Correction: "Li l3ard dyalha 2m" (Width is 2m). Sign is Height. So Width is irrelevant (No/4).
-    // "Li l3lo 2m" -> Sign prohibits >2m. If height IS 2m, it passes. So No (2).
     explanation: "العلامة تمنع العربات التي **يتجاوز** علوها 2 متر. إذا كان العلو 2 متر بالضبط فمسموح. كما أن العلامة تخص العلو وليس العرض.",
     category: "إشارات"
   },
@@ -1732,7 +1723,7 @@ export const PDF_3_QUESTIONS: Question[] = [
     imageUrl: "https://res.cloudinary.com/df3afqgey/image/upload/v1764514180/49_zlmus3.png",
     questionText: "كَنْسُوقْ شَاحِنَة صَغِيرَة، يُمْكِنْ لِي نْكَمَّلْ السَّيْرْ فَالطَّرِيقْ الْمَوْجُودَة عَلَى لِيمْنْ دْيَالِي : نَعَمْ (1) .. لَا (2)",
     options: ["1. نَعَمْ", "2. لَا"],
-    correctAnswerIndices: [0], // Grid: 1
+    correctAnswerIndices: [1], // Grid: 1
     explanation: "علامة المنع تخص الشاحنات الكبيرة (الوزن الثقيل). الشاحنة الصغيرة (B) مسموح لها.",
     category: "إشارات"
   },
@@ -1799,7 +1790,7 @@ export const EXAM_SERIES: ExamSeries[] = [
   },
   {
     id: "B-series-5",
-    title: "السلسلة رقم 1 (التشاور الطرقي)",
+    title: "السلسلة رقم 3 (التشاور الطرقي)",
     description: "أسئلة حول قواعد التشاور الطرقي.",
     isPremium: true,
     permisType: "B",
